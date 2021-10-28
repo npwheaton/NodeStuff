@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paintBox</title>
+    <link rel="stylesheet" href="paintingCss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div id="startscreen">
+            <div id="newgamebutton">New Game</div>
+
+            <div><input type="text" name="" id="roomselector">
+                <div id="joingamebutton">Join Game</div>
+            </div>
+        </div>
+
+        <div id="content">
+            
+            <canvas id="canvas"></canvas>
+            <div id="partyroom">
+                <h1 id="roomname">Room Name:</h1>
+                <ul id= "memberslist">
+                    <li class= member>
+                        <div class="color"></div>
+                        <span class = "membername"></span>
+                        <input type="checkbox" name="membercheckbox" id="1">
+                    </li>
+                </ul>
+
+                <div id="chatsdiv">
+
+                    <div id="chathistory"></div>
+                    <input type="text" name="chatbox" id="chatbox">
+                </div>
+
+            </div>
+            <div id="toolbox">
+                <div id="colorcontainer"> <input type="color" name="currentcolor" id="currentcolor"></div>
+
+                <div id="sizecontainer">
+                    <label class= "toollabel" id="sizelabel" for="currentsize">Size: </label>
+                    <input type="range"  min="1" max="75" class="range" name="currentsize" id="currentsize">
+                </div>
+                <div id="opaccontainer">
+                    <label for="currentopac" class="toollabel" id="opaclabel">Opacity: </label>
+                    <input type="range" class="range" min="0.01" step="0.01" max="1" name="currentopac" id="currentopac"></div>
+                <div class= "undoredo">
+                    <span id="undo">
+                        <i class="fas fa-undo"></i>
+                    </span>
+                    <span id="redo">
+                        <i class="fas fa-redo"></i>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="drawer.js" type = "module"></script>
+    <script src="PaintCommandManager.js" type="module"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="paintingFunc.js"type="module"></script>
+</body>
+</html>

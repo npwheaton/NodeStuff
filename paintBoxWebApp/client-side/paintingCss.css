@@ -1,0 +1,154 @@
+body{
+    background-color: azure;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#startscreen{
+    display: none;
+}
+#content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
+
+}
+#canvas{
+position: absolute;
+    background-color: white;
+    border: 2px solid black;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    cursor: crosshair;
+
+}
+#partyroom{
+    outline: 1px solid blueviolet;
+    position: absolute;
+    height: 100vh;
+    width: 19vw;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+#memberslist{
+    list-style-type: none;
+    
+}
+#chatbox{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    padding: 5px;
+
+    border: 1px solid black;
+    color: red;
+}
+#chathistory{
+    overflow-y: scroll;
+    height: 50vh;
+    
+}
+#toolbox{
+    position: absolute;
+
+    width: 80vw;
+    bottom: 0;
+    z-index: 2;
+    margin-bottom: 3vh;
+}
+#colorcontainer{
+    position: relative;
+    margin-left: 2vw;
+    display: inline-block;
+}
+#sizecontainer{
+    position: relative;
+    margin-left: 2vw;
+    display: inline-block;
+    
+}
+.toollabel{
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    
+}
+#opaccontainer{
+    position: relative;
+    margin-left: 2vw;
+    display: inline-block;
+}
+.range{
+    background: black;
+    -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  height: 5px;
+  background: black; 
+  border-radius: 30%;
+  position: relative;
+  bottom: 0;
+ 
+
+
+
+}
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    background-color: black;
+    height: 3vh;
+    width: 3vh;
+}
+.undoredo{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2.2rem;
+    
+
+}
+#redo{
+margin-left: 1vw;
+padding: 5px;
+text-align: center;
+border-radius: 30%;
+user-select: none;
+display: inline-block;
+transition: transform 0.5s linear;
+}
+#undo {
+    margin-left: 1vw;
+    padding: 5px;
+    text-align: center;
+    border-radius: 30%;
+    user-select: none;
+    transition: transform 0.5s linear;
+    display: inline-block;
+    
+    }
+#redo:hover, #redo:active, #undo:hover, #undo:active{
+    color:blue;
+    animation: fullcircle 0.5s linear;
+    
+}
+
+@keyframes fullcircle{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
