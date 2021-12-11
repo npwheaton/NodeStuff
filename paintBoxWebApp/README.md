@@ -15,4 +15,5 @@ In order to choose either option, the user must input a name for themselves. Thi
 Next, the user chooses start game or continue/join game. 
 **After clicking new game**, the user will be given a random lobby code (socket id given by socket.io) and can start drawing.
 **Before clicking continue/join game**, the user will have to input a lobby code for the lobby they want to join or to continue drawing on a canvas from a previous session.
+Users will have to use the same author name as used in a previous session in order to modify that authors drawings in the present session.
 All lobbies are public, and currently there isnt a block feature to stop other users from drawing on a canvas.
